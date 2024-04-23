@@ -6,13 +6,13 @@ const port = 3000;
 
 app.post('/primos', (req, res) => {
     const { number } = req.body;
-    const primeNumbers = calculatePrimeNumber(parseInt(number));
-    res.json({resultado: primeNumbers.length});
+    const primeNumbers = calculatePrimeNumbers(parseInt(number));
+    res.json({ result: primeNumbers.length });
 });
 
-const calculatePrimeNumber = (number) => {
+const calculatePrimeNumbers = (number) => {
     const numList = [];
-    for (let index = 2; i < number; index++) {
+    for (let index = 2; index < number; index++) {
         if (isPrimeNumber(index)) {
             numList.push(index);
         }
